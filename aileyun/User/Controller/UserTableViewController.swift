@@ -187,13 +187,14 @@ class UserTableViewController: UIViewController {
     
     func checkForRegister(urlS : String){
         
-        if UserManager.shareIntance.HCUser?.visitCard != nil && UserManager.shareIntance.HCUser?.visitCard != ""{
+        if UserManager.shareIntance.realName(authentication: navigationController) == true{
             //已认证
             registerH5(urlS: urlS)
-        }else{
-            self.navigationController?.pushViewController(BindHospitalViewController(), animated: true)
-            showAlert(title: "提醒", message: "还未进行身份认证")
         }
+//        else{
+//            self.navigationController?.pushViewController(BindHospitalViewController(), animated: true)
+//            showAlert(title: "提醒", message: "还未进行身份认证")
+//        }
     }
     
     func registerH5(urlS : String){
@@ -296,7 +297,7 @@ extension UserTableViewController : UITableViewDataSource, UITableViewDelegate {
             HCPrint(message: "我的咨询")
             self.navigationController?.pushViewController(ConsultRecordViewController(), animated: true)
         case "我的健康卡":
-            if UserManager.shareIntance.HCUser?.visitCard != nil && UserManager.shareIntance.HCUser?.visitCard != "" {
+            if UserManager.shareIntance.realName(authentication: navigationController) == true {
                 SVProgressHUD.show()
                 HttpRequestManager.shareIntance.HC_getH5URL(keyCode: "HEALTH_CARD") { (flag, url) in
                     print(url)
@@ -305,9 +306,10 @@ extension UserTableViewController : UITableViewDataSource, UITableViewDelegate {
                     webVC.url = url
                     self.navigationController?.pushViewController(webVC, animated: true)
                 }
-            }else{
-                self.navigationController?.pushViewController(BindHospitalViewController(), animated: true)
             }
+//            else{
+//                self.navigationController?.pushViewController(BindHospitalViewController(), animated: true)
+//            }
         case "通知消息":
             HCPrint(message: "通知消息")
             self.navigationController?.pushViewController(MessageViewController(), animated: true)
