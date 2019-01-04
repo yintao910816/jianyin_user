@@ -76,6 +76,13 @@ class BindedViewController: UIViewController {
         self.view.backgroundColor = kDefaultThemeColor
         
         initUI()
+        
+        if let user = UserManager.shareIntance.HCUser {
+            hospitalL.text = user.hospitalId?.stringValue
+            medNumL.text = user.visitCard
+            nameL.text = user.realname
+            idNumL.text = user.idNo
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -236,7 +243,17 @@ class BindedViewController: UIViewController {
     
     func unbindAction(){
         SVProgressHUD.show()
-        HttpRequestManager.shareIntance.HC_unbind(hospitalId: (bindedM?.hospitalId?.intValue)!, medCard: (bindedM?.visitCard)!, idNo: (bindedM?.idNo)!) {( success, message) in
+//        HttpRequestManager.shareIntance.HC_unbind(hospitalId: (bindedM?.hospitalId?.intValue)!, medCard: (bindedM?.visitCard)!, idNo: (bindedM?.idNo)!) {( success, message) in
+//            if success == true {
+//                HCShowInfo(info: message)
+//                self.navigationController?.popViewController(animated: true)
+//            }else{
+//                HCShowError(info: message)
+//            }
+//        }
+
+        let user = UserManager.shareIntance.HCUser
+        HttpRequestManager.shareIntance.HC_unbind(hospitalId: (user?.hospitalId?.intValue)!, medCard: (user?.visitCard)!, idNo: (user?.idNo)!) {( success, message) in
             if success == true {
                 HCShowInfo(info: message)
                 self.navigationController?.popViewController(animated: true)

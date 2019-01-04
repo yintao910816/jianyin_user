@@ -12,6 +12,17 @@ import MJRefresh
 
 class ConsultViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
 
+    lazy var remindLable: UILabel = {
+        let l = UILabel.init(frame: self.view.bounds)
+        l.text = "功能正在建设中"
+        l.font = UIFont.systemFont(ofSize: 16)
+        l.textColor = UIColor.init(red: 100.0/255.0, green: 100.0/255.0, blue: 100.0/255.0, alpha: 1)
+        l.textAlignment = .center
+        l.backgroundColor = UIColor.groupTableViewBackground
+        l.isHidden = true
+        return l
+    }()
+    
     lazy var tableView : UITableView = {
         let space = AppDelegate.shareIntance.space
         let t = UITableView.init(frame: CGRect.init(x: 0, y: space.topSpace + 44, width: SCREEN_WIDTH, height: SCREEN_HEIGHT - space.topSpace - space.bottomSpace - 92))
@@ -26,6 +37,7 @@ class ConsultViewController: BaseViewController, UITableViewDelegate, UITableVie
 
     var doctorArr : [DoctorModel]?{
         didSet{
+            remindLable.isHidden = (doctorArr?.count ?? 0) > 0
             tableView.reloadData()
         }
     }
@@ -52,6 +64,8 @@ class ConsultViewController: BaseViewController, UITableViewDelegate, UITableVie
         footV?.setTitle("上拉加载", for: .idle)
         footV?.setTitle("正在请求", for: .refreshing)
         tableView.mj_footer = footV
+        
+        view.addSubview(remindLable)
         
         requestData()
     }

@@ -361,8 +361,15 @@ class HttpRequestManager {
                     UserDefaults.standard.set(dic, forKey: kUserInfoDic)
                     let infoModel = HCUserInfoModel.init(dic)
                     UserManager.shareIntance.HCUserInfo = infoModel
+                    
+                    UserManager.shareIntance.HCUser?.visitCard = infoModel.visitCard
+                    let dic = UserDefaults.standard.value(forKey: kUserDic) as? [String : Any]
+                    if var d = dic{
+                        d["visitCard"] = infoModel.visitCard
+                        UserDefaults.standard.set(d, forKey: kUserDic)
+                    }
                 }
-    
+                
                 callback(true, ccb.msg)
             }else{
                 callback(false, ccb.msg)

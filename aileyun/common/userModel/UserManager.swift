@@ -106,14 +106,15 @@ class UserManager: NSObject {
 
 extension UserManager {
     
-    func realName(authentication viewController: UIViewController) ->Bool{
+    @discardableResult
+    func realName(authentication navigationController: UINavigationController?) ->Bool{
         if UserManager.shareIntance.HCUser?.visitCard != nil && UserManager.shareIntance.HCUser?.visitCard != "" {
             return true
         }
-        if let token =  UserManager.shareIntance.HCUser?.token {
+        if let _ =  UserManager.shareIntance.HCUser?.token {
             let webVC = WebViewController()
             webVC.url = REALNAME_AUTHOR
-            viewController.navigationController?.pushViewController(webVC, animated: true)
+            navigationController?.pushViewController(webVC, animated: true)
         }else {
             SVProgressHUD.showInfo(withStatus: "请重新登录")
         }

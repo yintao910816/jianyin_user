@@ -78,17 +78,23 @@ class HomeFunctionView: UIView {
             }else{
                 if let needBind = model.isBind {
                     if needBind.intValue == 1 {
-                        guard UserManager.shareIntance.HCUser?.visitCard != nil && UserManager.shareIntance.HCUser?.visitCard != "" else{
-                            
-                            self.naviVC?.pushViewController(BindHospitalViewController(), animated: true)
-                            showAlert(title: "提醒", message: "此功能需要实名认证")
-                            
-                            return
+                        if UserManager.shareIntance.realName(authentication: naviVC) == true {
+                            let webVC = WebViewController()
+                            webVC.url = url
+                            naviVC?.pushViewController(webVC, animated: true)
                         }
+                        
+//                        guard UserManager.shareIntance.HCUser?.visitCard != nil && UserManager.shareIntance.HCUser?.visitCard != "" else{
+//
+//                            self.naviVC?.pushViewController(BindHospitalViewController(), animated: true)
+//                            showAlert(title: "提醒", message: "此功能需要实名认证")
+//
+//                            return
+//                        }
                     }
-                    let webVC = WebViewController()
-                    webVC.url = url
-                    naviVC?.pushViewController(webVC, animated: true)
+//                    let webVC = WebViewController()
+//                    webVC.url = url
+//                    naviVC?.pushViewController(webVC, animated: true)
                 }
             }
         }else{
@@ -106,14 +112,17 @@ class HomeFunctionView: UIView {
     
     
     func jiayinPay(){
-        guard UserManager.shareIntance.HCUser?.visitCard != nil && UserManager.shareIntance.HCUser?.visitCard != "" else{
-            
-            self.naviVC?.pushViewController(BindHospitalViewController(), animated: true)
-            showAlert(title: "提醒", message: "此功能需要实名认证")
-            
-            return
+        if UserManager.shareIntance.realName(authentication: naviVC) == true {
+            self.naviVC?.pushViewController(RechargeViewController(), animated: true)
         }
-        self.naviVC?.pushViewController(RechargeViewController(), animated: true)
+//        guard UserManager.shareIntance.HCUser?.visitCard != nil && UserManager.shareIntance.HCUser?.visitCard != "" else{
+//
+//            self.naviVC?.pushViewController(BindHospitalViewController(), animated: true)
+//            showAlert(title: "提醒", message: "此功能需要实名认证")
+//
+//            return
+//        }
+//        self.naviVC?.pushViewController(RechargeViewController(), animated: true)
         
 //        let rechargeResultCtrl = RechargeResultViewController.init(nibName: "RechargeResultViewController", bundle: Bundle.main)
 //        rechargeResultCtrl.set(orderNum: "3746135683154671536741367451635", payType: "支付宝充值", payMoney: "100", payState: false)

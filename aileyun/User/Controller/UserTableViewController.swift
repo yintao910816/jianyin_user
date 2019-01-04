@@ -66,6 +66,10 @@ class UserTableViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        HttpRequestManager.shareIntance.HC_userInfo(callback: { (success, msg) in
+
+        })
     }
     
     deinit {
@@ -277,8 +281,10 @@ extension UserTableViewController : UITableViewDataSource, UITableViewDelegate {
         switch t {
         case "实名认证":
             HCPrint(message: "实名认证")
-//            authIDNumber()
-            UserManager.shareIntance.realName(authentication: self)
+            if UserManager.shareIntance.realName(authentication: navigationController) == true {
+                let bindVC = AuthenticationViewController()
+                navigationController?.pushViewController(bindVC, animated: true)
+            }
 
         case "我的预约":
             HCPrint(message: "我的预约")
