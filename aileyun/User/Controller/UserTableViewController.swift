@@ -67,8 +67,8 @@ class UserTableViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
-        HttpRequestManager.shareIntance.HC_userInfo(callback: { (success, msg) in
-
+        HttpRequestManager.shareIntance.HC_userInfo(callback: { [weak self] (success, msg) in
+            if success == true { self?.setUserInfo() }
         })
     }
     

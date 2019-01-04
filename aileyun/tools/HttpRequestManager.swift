@@ -363,9 +363,15 @@ class HttpRequestManager {
                     UserManager.shareIntance.HCUserInfo = infoModel
                     
                     UserManager.shareIntance.HCUser?.visitCard = infoModel.visitCard
+                    UserManager.shareIntance.HCUser?.realname = infoModel.realname
+                    UserManager.shareIntance.HCUser?.nickname = infoModel.nickname
+
                     let dic = UserDefaults.standard.value(forKey: kUserDic) as? [String : Any]
                     if var d = dic{
                         d["visitCard"] = infoModel.visitCard
+                        d["nickname"] = infoModel.nickname
+                        d["realname"] = infoModel.realname
+
                         UserDefaults.standard.set(d, forKey: kUserDic)
                     }
                 }
