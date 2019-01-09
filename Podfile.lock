@@ -35,7 +35,7 @@ DEPENDENCIES:
   - WechatOpenSDK
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AFNetworking
     - MJExtension
     - MJRefresh
@@ -55,6 +55,6 @@ SPEC CHECKSUMS:
   UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
   WechatOpenSDK: 491d965d79335070328571d3e79f714549e79a5e
 
-PODFILE CHECKSUM: ed896fab467cd1678c121db7392453c3b710fac3
+PODFILE CHECKSUM: 08a521f8ba3d0eb392c16b048d3b809539c6af4d
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

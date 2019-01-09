@@ -212,8 +212,6 @@
 		3C60B6571F18927D004B4AFA /* hc_yuyin33@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C60B6501F18927D004B4AFA /* hc_yuyin33@2x.png */; };
 		3C60B6581F18927D004B4AFA /* hc_yuyin33@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C60B6511F18927D004B4AFA /* hc_yuyin33@3x.png */; };
 		3C60B6681F1892DB004B4AFA /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3C60B65C1F1892DB004B4AFA /* amrFileCodec.mm */; };
-		3C60B6691F1892DB004B4AFA /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C60B65E1F1892DB004B4AFA /* libopencore-amrnb.a */; };
-		3C60B66A1F1892DB004B4AFA /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C60B65F1F1892DB004B4AFA /* libopencore-amrwb.a */; };
 		3C60B66B1F1892DB004B4AFA /* VoiceConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3C60B6671F1892DB004B4AFA /* VoiceConverter.mm */; };
 		3C60B66D1F189310004B4AFA /* AudioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C60B66C1F189310004B4AFA /* AudioButton.swift */; };
 		3C60B6711F1893B7004B4AFA /* PhotoesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C60B6701F1893B7004B4AFA /* PhotoesCollectionViewCell.swift */; };
@@ -352,6 +350,8 @@
 		3CFAAEFE1F5013C600096D98 /* HC_consultCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFAAEFD1F5013C600096D98 /* HC_consultCellModel.swift */; };
 		3CFAAF001F50170800096D98 /* HC_consultViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFAAEFF1F50170800096D98 /* HC_consultViewmodel.swift */; };
 		3CFADBD31F6908B2008E3E1E /* noData.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CFADBD11F6908B2008E3E1E /* noData.png */; };
+		B86CC4C621DFC5920038D5D2 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B86CC4C421DFC5920038D5D2 /* libopencore-amrwb.a */; };
+		B86CC4C721DFC5920038D5D2 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B86CC4C521DFC5920038D5D2 /* libopencore-amrnb.a */; };
 		B8711EC42178606F00F60C76 /* RechargeResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8711EC22178606F00F60C76 /* RechargeResultViewController.swift */; };
 		B8711EC52178606F00F60C76 /* RechargeResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8711EC32178606F00F60C76 /* RechargeResultViewController.xib */; };
 		B8D2953021D7A2FC00A1BD52 /* VideoCaptureDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D2951521D7A2FC00A1BD52 /* VideoCaptureDevice.m */; };
@@ -599,8 +599,6 @@
 		3C60B6511F18927D004B4AFA /* hc_yuyin33@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hc_yuyin33@3x.png"; sourceTree = "<group>"; };
 		3C60B65B1F1892DB004B4AFA /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
 		3C60B65C1F1892DB004B4AFA /* amrFileCodec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = amrFileCodec.mm; sourceTree = "<group>"; };
-		3C60B65E1F1892DB004B4AFA /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
-		3C60B65F1F1892DB004B4AFA /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
 		3C60B6611F1892DB004B4AFA /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
 		3C60B6621F1892DB004B4AFA /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
 		3C60B6641F1892DB004B4AFA /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
@@ -753,6 +751,8 @@
 		3CFAAEFF1F50170800096D98 /* HC_consultViewmodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HC_consultViewmodel.swift; sourceTree = "<group>"; };
 		3CFADBD11F6908B2008E3E1E /* noData.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noData.png; sourceTree = "<group>"; };
 		6D2808A40648D35BFB8F8A19 /* Pods-aileyun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aileyun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aileyun/Pods-aileyun.debug.xcconfig"; sourceTree = "<group>"; };
+		B86CC4C421DFC5920038D5D2 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		B86CC4C521DFC5920038D5D2 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
 		B8711EC22178606F00F60C76 /* RechargeResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargeResultViewController.swift; sourceTree = "<group>"; };
 		B8711EC32178606F00F60C76 /* RechargeResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RechargeResultViewController.xib; sourceTree = "<group>"; };
 		B8D2951421D7A2FC00A1BD52 /* VideoCaptureDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCaptureDevice.h; sourceTree = "<group>"; };
@@ -799,16 +799,16 @@
 				3C821EB61F25C3E7005C976D /* CoreText.framework in Frameworks */,
 				3C821EB41F25C3DA005C976D /* QuartzCore.framework in Frameworks */,
 				3C1220E21EFB5C92000BD52D /* CoreTelephony.framework in Frameworks */,
+				B86CC4C721DFC5920038D5D2 /* libopencore-amrnb.a in Frameworks */,
 				3C1220DC1EFB5C55000BD52D /* SystemConfiguration.framework in Frameworks */,
 				3C821EB21F25C3BC005C976D /* libz.tbd in Frameworks */,
 				3C821EB01F25C3B2005C976D /* libc++.tbd in Frameworks */,
 				3C821EAD1F25C381005C976D /* AlipaySDK.framework in Frameworks */,
 				3CF697AE2092FCE900B31099 /* libWeChatSDK.a in Frameworks */,
-				3C60B6691F1892DB004B4AFA /* libopencore-amrnb.a in Frameworks */,
 				3C1220E01EFB5C79000BD52D /* libsqlite3.tbd in Frameworks */,
-				3C60B66A1F1892DB004B4AFA /* libopencore-amrwb.a in Frameworks */,
 				3C1220DA1EFB5C47000BD52D /* libiconv.tbd in Frameworks */,
 				F666A4136C77989F16603994 /* Pods_aileyun.framework in Frameworks */,
+				B86CC4C621DFC5920038D5D2 /* libopencore-amrwb.a in Frameworks */,
 				3CF697AB2092FCE900B31099 /* libUMSPosPayOnly.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1399,8 +1399,8 @@
 		3C60B6591F1892DB004B4AFA /* VoiceConvert */ = {
 			isa = PBXGroup;
 			children = (
+				B86CC4C321DFC5920038D5D2 /* lib */,
 				3C60B65A1F1892DB004B4AFA /* amrwapper */,
-				3C60B65D1F1892DB004B4AFA /* lib */,
 				3C60B6601F1892DB004B4AFA /* opencore-amrnb */,
 				3C60B6631F1892DB004B4AFA /* opencore-amrwb */,
 				3C60B6661F1892DB004B4AFA /* VoiceConverter.h */,
@@ -1416,15 +1416,6 @@
 				3C60B65C1F1892DB004B4AFA /* amrFileCodec.mm */,
 			);
 			path = amrwapper;
-			sourceTree = "<group>";
-		};
-		3C60B65D1F1892DB004B4AFA /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				3C60B65E1F1892DB004B4AFA /* libopencore-amrnb.a */,
-				3C60B65F1F1892DB004B4AFA /* libopencore-amrwb.a */,
-			);
-			path = lib;
 			sourceTree = "<group>";
 		};
 		3C60B6601F1892DB004B4AFA /* opencore-amrnb */ = {
@@ -1622,6 +1613,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B86CC4C321DFC5920038D5D2 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				B86CC4C421DFC5920038D5D2 /* libopencore-amrwb.a */,
+				B86CC4C521DFC5920038D5D2 /* libopencore-amrnb.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		B8D2951221D7A2FC00A1BD52 /* FaceSDK-Collect-WithLiveness */ = {
 			isa = PBXGroup;
 			children = (
@@ -1751,7 +1751,7 @@
 					3C3D782F1EF3C07600DE6F46 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 9XV6P3KK2R;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -2294,8 +2294,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = aileyun/aileyun.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 9XV6P3KK2R;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2355,7 +2355,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xynet.PocketJoyUsers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = ffffffffffff;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = aileyun/Bridge.h;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2370,7 +2370,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = aileyun/aileyun.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (

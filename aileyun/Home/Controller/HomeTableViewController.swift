@@ -94,6 +94,20 @@ class HomeTableViewController: BaseViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+
+        if UserManager.shareIntance.realName(authentication: nil, needPush: false) == false {
+            HttpRequestManager.shareIntance.HC_userInfo(callback: { (success, msg) in
+                if success == true {
+                    HCPrint(message: "个人信息获取成功")
+                }else {
+                    HCPrint(message: "个人信息获取失败")
+                }
+            })
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -104,10 +118,6 @@ class HomeTableViewController: BaseViewController {
         self.tableV.mj_header.beginRefreshing()
         
         NotificationCenter.default.addObserver(self, selector: #selector(HomeTableViewController.beginRefresh), name: NSNotification.Name.init(BIND_SUCCESS), object: nil)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     deinit {
