@@ -76,7 +76,7 @@ class UserTableViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
-    func setUserInfo(){
+    @objc func setUserInfo(){
         tableHeadV.userM = UserManager.shareIntance.HCUser
     }
     
@@ -87,11 +87,11 @@ class UserTableViewController: UIViewController {
         
         let logoutBtn = UIButton.init(frame: CGRect.init(x: 0, y: 10, width: SCREEN_WIDTH, height: 44))
         logoutBtn.backgroundColor = UIColor.white
-        logoutBtn.setTitle("退出登录", for: UIControlState.normal)
+        logoutBtn.setTitle("退出登录", for: .normal)
         logoutBtn.setTitleColor(kDefaultThemeColor, for: .normal)
         logoutBtn.titleLabel?.font = UIFont.init(name: kReguleFont, size: kTextSize)
         
-        logoutBtn.addTarget(self, action: #selector(UserTableViewController.logout), for: UIControlEvents.touchUpInside)
+        logoutBtn.addTarget(self, action: #selector(UserTableViewController.logout), for: .touchUpInside)
         footContainerV.addSubview(logoutBtn)
         
         let infoV = UIView.init(frame: CGRect.init(x: 0, y: 80, width: SCREEN_WIDTH, height: 100))
@@ -101,7 +101,7 @@ class UserTableViewController: UIViewController {
         phoneL.textColor = kLightTextColor
         phoneL.font = UIFont.init(name: kReguleFont, size: kTextSize)
         let phoneStr = NSMutableAttributedString.init(string: "服务电话：" + KServicePhone)
-        phoneStr.addAttributes([NSForegroundColorAttributeName : kDefaultThemeColor], range: NSRange.init(location: 5, length: 11))
+        phoneStr.addAttributes([NSAttributedString.Key.foregroundColor : kDefaultThemeColor], range: NSRange.init(location: 5, length: 11))
         phoneL.attributedText = phoneStr
         phoneL.textAlignment = .center
         infoV.addSubview(phoneL)
@@ -141,14 +141,14 @@ class UserTableViewController: UIViewController {
         }
     }
     
-    func callThePhone(){
+    @objc func callThePhone(){
         let s = "tel://" + KServicePhone
         if let u = URL.init(string: s){
             UIApplication.shared.openURL(u)
         }
     }
     
-    func logout(){
+    @objc func logout(){
         let alertController = UIAlertController(title: "提醒",
                                                 message: "退出登录会清空个人信息", preferredStyle: .alert)
         let cancelAction = UIAlertAction.init(title: "确定退出", style: .cancel) { (action) in

@@ -159,7 +159,7 @@ class WebViewController: BaseViewController {
         }
     }
 
-    func popViewController(){
+    @objc func popViewController(){
         if isPopToRoot == true {
             navigationController?.popToRootViewController(animated: true)
         }else if webView.canGoBack{
@@ -173,7 +173,7 @@ class WebViewController: BaseViewController {
 
 extension WebViewController : UIWebViewDelegate{
     
-    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool{
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool{
 
         let s = request.url?.absoluteString
         let rs = "app.jyyy.so://".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
@@ -237,7 +237,7 @@ extension WebViewController : UIWebViewDelegate{
         
         // 实名认证成功刷新本地数据
         let refreshInfofor: @convention(block) () ->() = {
-            DispatchQueue.main.async { _ in
+            DispatchQueue.main.async {
                 UserManager.shareIntance.updateUserInfo(callback: { ret in
                     if ret == true { HCPrint(message: "本地用信息更新成功") }
                     else { HCPrint(message: "本地用信息更新成功") }

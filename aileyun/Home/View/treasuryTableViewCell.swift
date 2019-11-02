@@ -63,9 +63,9 @@ class treasuryTableViewCell: UITableViewCell {
     
    
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.selectionStyle = UITableViewCellSelectionStyle.none
+        self.selectionStyle = .none
         
         initUI()
     }
@@ -127,7 +127,7 @@ class treasuryTableViewCell: UITableViewCell {
 //
 //        let readIV = UIImageView()
 //        readIV.image = UIImage.init(named: "浏览量")
-//        readIV.contentMode = UIViewContentMode.scaleAspectFit
+//        readIV.contentMode = .scaleAspectFit
 //        self.addSubview(readIV)
 //        readIV.snp.updateConstraints { (make) in
 //            make.right.equalTo(readL.snp.left)

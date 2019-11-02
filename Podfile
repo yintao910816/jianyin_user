@@ -2,8 +2,6 @@ platform :ios, '9.0'
 
 target ‘aileyun’ do
 
-project '/Users/yintao/Desktop/项目/胡伟光医药项目/Git/jianyin_user/aileyun.xcodeproj'
-
 use_frameworks!
 
 pod 'UMengAnalytics-NO-IDFA' 

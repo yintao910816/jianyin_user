@@ -289,7 +289,6 @@
 		3C8796481F1772F200049405 /* ConsultRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8796471F1772F200049405 /* ConsultRecordViewController.swift */; };
 		3C8B0BBD1F3C342400611AF2 /* WebMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B0BBC1F3C342400611AF2 /* WebMenuViewController.swift */; };
 		3C8B0BBF1F3C392200611AF2 /* menuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8B0BBE1F3C392200611AF2 /* menuButton.swift */; };
-		3C8B0BC31F3C52F800611AF2 /* libUMessage_Sdk_1.5.0a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8B0BC11F3C52F800611AF2 /* libUMessage_Sdk_1.5.0a.a */; };
 		3C8F44751FEA4EE000EF85A6 /* guanggao.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8F44741FEA4EE000EF85A6 /* guanggao.png */; };
 		3C9008D61EFBADB100CED474 /* UserQQModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9008D51EFBADB100CED474 /* UserQQModel.swift */; };
 		3C9008D81EFBC06A00CED474 /* treasuryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9008D71EFBC06A00CED474 /* treasuryTableViewCell.swift */; };
@@ -678,7 +677,6 @@
 		3C8796471F1772F200049405 /* ConsultRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultRecordViewController.swift; sourceTree = "<group>"; };
 		3C8B0BBC1F3C342400611AF2 /* WebMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebMenuViewController.swift; sourceTree = "<group>"; };
 		3C8B0BBE1F3C392200611AF2 /* menuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuButton.swift; sourceTree = "<group>"; };
-		3C8B0BC11F3C52F800611AF2 /* libUMessage_Sdk_1.5.0a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMessage_Sdk_1.5.0a.a; sourceTree = "<group>"; };
 		3C8B0BC21F3C52F800611AF2 /* UMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMessage.h; sourceTree = "<group>"; };
 		3C8B0BC41F3C5D8E00611AF2 /* aileyun.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = aileyun.entitlements; sourceTree = "<group>"; };
 		3C8F44711FEA04C700EF85A6 /* BindHospitalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindHospitalViewController.swift; sourceTree = "<group>"; };
@@ -792,7 +790,6 @@
 				3C821EBE1F25C41C005C976D /* CoreMotion.framework in Frameworks */,
 				3C821EBC1F25C414005C976D /* CFNetwork.framework in Frameworks */,
 				3C821EBA1F25C405005C976D /* Foundation.framework in Frameworks */,
-				3C8B0BC31F3C52F800611AF2 /* libUMessage_Sdk_1.5.0a.a in Frameworks */,
 				3C821EB81F25C3FB005C976D /* UIKit.framework in Frameworks */,
 				3C8158AD208DAF4C008DA859 /* TencentOpenAPI.framework in Frameworks */,
 				3C1220DE1EFB5C64000BD52D /* CoreGraphics.framework in Frameworks */,
@@ -1505,7 +1502,6 @@
 		3C8B0BC01F3C52F800611AF2 /* UMessage_Sdk_1.5.0a */ = {
 			isa = PBXGroup;
 			children = (
-				3C8B0BC11F3C52F800611AF2 /* libUMessage_Sdk_1.5.0a.a */,
 				3C8B0BC21F3C52F800611AF2 /* UMessage.h */,
 			);
 			path = UMessage_Sdk_1.5.0a;
@@ -1768,6 +1764,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -2000,7 +1997,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-aileyun/Pods-aileyun-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-aileyun/Pods-aileyun-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -2019,7 +2016,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aileyun/Pods-aileyun-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-aileyun/Pods-aileyun-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2316,7 +2313,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/aileyun/tools/VoiceConvert/lib",
-					"$(PROJECT_DIR)/aileyun/tools/UMessage_Sdk_1.5.0a",
 					"$(PROJECT_DIR)/aileyun/tools/libUMSUnifyPay",
 					"$(PROJECT_DIR)/aileyun/tools/libUMSUnifyPay/WeChat",
 				);
@@ -2357,7 +2353,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = aileyun/Bridge.h;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -2392,7 +2388,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/aileyun/tools/VoiceConvert/lib",
-					"$(PROJECT_DIR)/aileyun/tools/UMessage_Sdk_1.5.0a",
 					"$(PROJECT_DIR)/aileyun/tools/libUMSUnifyPay",
 					"$(PROJECT_DIR)/aileyun/tools/libUMSUnifyPay/WeChat",
 				);
@@ -2433,7 +2428,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = aileyun/Bridge.h;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

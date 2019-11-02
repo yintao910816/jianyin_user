@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WXApiDelegate{
     }
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let licensePath = Bundle.main.path(forResource: FACE_LICENSE_NAME, ofType: FACE_LICENSE_SUFFIX)
         FaceSDKManager.sharedInstance()?.setLicenseID(FACE_LICENSE_ID, andLocalLicenceFile: licensePath)
         HCPrint(message: FaceSDKManager.sharedInstance()?.canWork())
@@ -61,7 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WXApiDelegate{
     }
     
     
-    func UMeng(launchOptions: [UIApplicationLaunchOptionsKey: Any]?){
+    func UMeng(launchOptions: [UIApplication.LaunchOptionsKey: Any]?){
         let obj = UMAnalyticsConfig.init()
         obj.appKey = KUMengKey
         MobClick.start(withConfigure: obj)
@@ -135,7 +135,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WXApiDelegate{
 }
 
 extension AppDelegate {
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         
         HCPrint(message: url.absoluteString)
         if url.scheme?.contains(kScheme) == true  {

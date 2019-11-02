@@ -25,7 +25,7 @@ class AuthenticationViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
@@ -81,14 +81,14 @@ class AuthenticationViewController: UIViewController {
         paraStyle.lineSpacing = 3
         paraStyle.paragraphSpacing = 3
         paraStyle.headIndent = 20
-        attStr.addAttribute(NSParagraphStyleAttributeName, value: paraStyle, range: NSRange.init(location: 0, length: attStr.length))
+        attStr.addAttribute(NSAttributedString.Key.paragraphStyle, value: paraStyle, range: NSRange.init(location: 0, length: attStr.length))
         
         attentionL.attributedText = attStr
         attentionL.sizeToFit()
         
     }
 
-    func cancelAuth(){
+    @objc func cancelAuth(){
         HttpRequestManager.shareIntance.HC_unbindJIAYIN { (success, msg) in
             if success == true{
                 HCShowInfo(info: msg)

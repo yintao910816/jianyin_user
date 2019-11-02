@@ -17,6 +17,12 @@ protocol GetPhotoCenterDelegate : NSObjectProtocol {
     func getImage()->UIImage
 }
 
+extension GetPhotoCenterDelegate {
+    func getPhotoCenter()->CGPoint { .zero }
+    func getImage()->UIImage { return UIImage() }
+}
+
+
 class RecordTableViewController: UITableViewController {
     weak var photoCenterDelegate : GetPhotoCenterDelegate?
     weak var parentVC : UIViewController?
@@ -71,7 +77,7 @@ class RecordTableViewController: UITableViewController {
     lazy var nodataIV : UIImageView = {
         let IV = UIImageView.init(frame: CGRect.init(x: 40, y: 100, width: SCREEN_WIDTH - 80, height: SCREEN_WIDTH - 80))
         IV.image = UIImage.init(named: "noData")
-        IV.contentMode = UIViewContentMode.scaleAspectFit
+        IV.contentMode = .scaleAspectFit
         
         self.view.addSubview(IV)
         return IV
@@ -163,7 +169,7 @@ extension RecordTableViewController {
         }
     }
     
-    func moreData(){
+    @objc func moreData(){
         self.tableView.mj_footer.endRefreshing()
         
         SVProgressHUD.show()
@@ -470,8 +476,8 @@ extension RecordTableViewController {
 }
 
 extension RecordTableViewController : UINavigationControllerDelegate {
-    
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         let pushTransition = PushAnimation()
         
@@ -482,7 +488,7 @@ extension RecordTableViewController : UINavigationControllerDelegate {
             HCPrint(message: scP)
         }
         
-        if operation == UINavigationControllerOperation.push{
+        if operation == .push{
             pushTransition.aniType = .kAnimatorTransitionTypePush
             pushTransition.itemCenter = scP
         }else{

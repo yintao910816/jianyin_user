@@ -80,7 +80,7 @@ class RechargeViewController: BaseViewController {
     }
     
     
-    func checkPayResult(){
+    @objc func checkPayResult(){
         if let s = merOrderId{    // "3194201805161052221379905827"
             SVProgressHUD.show()
             UnifyPayPluginManager.shareIntance.checkPayResult(merOrderId: s) { [weak self](bool) in
@@ -202,7 +202,7 @@ class RechargeViewController: BaseViewController {
         cardBtn.setTitle("门诊充值", for: .normal)
         cardBtn.titleLabel?.font = UIFont.init(name: kReguleFont, size: kTextSize - 2)
         cardBtn.setTitleColor(kTextColor, for: .normal)
-        cardBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0)
+        cardBtn.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
         cardBtn.setImage(UIImage.init(named: "unselected"), for: .normal)
         cardBtn.setImage(UIImage.init(named: "selected"), for: .selected)
         cardBtn.tag = 1
@@ -221,7 +221,7 @@ class RechargeViewController: BaseViewController {
         hospitalBtn.setTitle("住院押金", for: .normal)
         hospitalBtn.titleLabel?.font = UIFont.init(name: kReguleFont, size: kTextSize - 2)
         hospitalBtn.setTitleColor(kTextColor, for: .normal)
-        hospitalBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0)
+        hospitalBtn.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
         hospitalBtn.setImage(UIImage.init(named: "unselected"), for: .normal)
         hospitalBtn.setImage(UIImage.init(named: "selected"), for: .selected)
         hospitalBtn.tag = 2
@@ -279,7 +279,7 @@ class RechargeViewController: BaseViewController {
             make.width.height.equalTo(30)
         }
         alipayImgV.image = UIImage.init(named: "支付宝")
-        alipayImgV.contentMode = UIViewContentMode.scaleAspectFit
+        alipayImgV.contentMode = .scaleAspectFit
         
         let alipayL = UILabel()
         containerV.addSubview(alipayL)
@@ -299,10 +299,10 @@ class RechargeViewController: BaseViewController {
             make.right.equalTo(containerV).offset(-20)
             make.width.height.equalTo(30)
         }
-        alipayBtn.setImage(UIImage.init(named: "unselected"), for: UIControlState.normal)
-        alipayBtn.setImage(UIImage.init(named: "selected"), for: UIControlState.selected)
+        alipayBtn.setImage(UIImage.init(named: "unselected"), for: .normal)
+        alipayBtn.setImage(UIImage.init(named: "selected"), for: .selected)
         alipayBtn.tag = 0
-        alipayBtn.addTarget(self, action: #selector(RechargeViewController.chooseTool), for: UIControlEvents.touchUpInside)
+        alipayBtn.addTarget(self, action: #selector(RechargeViewController.chooseTool), for: .touchUpInside)
         
         let diviV = UIView()
         containerV.addSubview(diviV)
@@ -322,7 +322,7 @@ class RechargeViewController: BaseViewController {
             make.top.equalTo(alipayImgV.snp.bottom).offset(20)
         }
         weixinImgV.image = UIImage.init(named: "微信支付")
-        weixinImgV.contentMode = UIViewContentMode.scaleAspectFit
+        weixinImgV.contentMode = .scaleAspectFit
         
         let weixinL = UILabel()
         containerV.addSubview(weixinL)
@@ -342,10 +342,10 @@ class RechargeViewController: BaseViewController {
             make.right.equalTo(containerV).offset(-20)
             make.width.height.equalTo(30)
         }
-        weixinBtn.setImage(UIImage.init(named: "unselected"), for: UIControlState.normal)
-        weixinBtn.setImage(UIImage.init(named: "selected"), for: UIControlState.selected)
+        weixinBtn.setImage(UIImage.init(named: "unselected"), for: .normal)
+        weixinBtn.setImage(UIImage.init(named: "selected"), for: .selected)
         weixinBtn.tag = 1
-        weixinBtn.addTarget(self, action: #selector(RechargeViewController.chooseTool), for: UIControlEvents.touchUpInside)
+        weixinBtn.addTarget(self, action: #selector(RechargeViewController.chooseTool), for: .touchUpInside)
         
         let divisionV = UIView()
         containerV.addSubview(divisionV)
@@ -380,7 +380,7 @@ class RechargeViewController: BaseViewController {
         phoneL.textColor = kLightTextColor
         phoneL.font = UIFont.init(name: kReguleFont, size: kTextSize - 2)
         let phoneStr = NSMutableAttributedString.init(string: "如有疑问可到前台咨询或者拨打电话：" + KServicePhone)
-        phoneStr.addAttributes([NSForegroundColorAttributeName : kDefaultThemeColor], range: NSRange.init(location: 17, length: 11))
+        phoneStr.addAttributes([NSAttributedString.Key.foregroundColor : kDefaultThemeColor], range: NSRange.init(location: 17, length: 11))
         phoneL.attributedText = phoneStr
         phoneL.textAlignment = .center
         infoV.addSubview(phoneL)
@@ -402,18 +402,18 @@ class RechargeViewController: BaseViewController {
             make.height.equalTo(48)
             make.bottom.equalTo(self.view).offset(-space.bottomSpace)
         }
-        payBtn.setTitle("确认支付", for: UIControlState.normal)
+        payBtn.setTitle("确认支付", for: .normal)
         payBtn.titleLabel?.font = UIFont.init(name: kBoldFont, size: 16)
         payBtn.backgroundColor = kDefaultThemeColor
         
-        payBtn.addTarget(self, action: #selector(RechargeViewController.pay), for: UIControlEvents.touchUpInside)
+        payBtn.addTarget(self, action: #selector(RechargeViewController.pay), for: .touchUpInside)
     }
     
-    func selectPurpose(btn : UIButton) {
+    @objc func selectPurpose(btn : UIButton) {
         defaultPurpose = btn.tag
     }
     
-    func callThePhone(){
+    @objc func callThePhone(){
         let s = "tel://" + KServicePhone
         if let u = URL.init(string: s){
             UIApplication.shared.openURL(u)
@@ -421,11 +421,11 @@ class RechargeViewController: BaseViewController {
     }
     
     
-    func chooseTool(btn : UIButton){
+    @objc func chooseTool(btn : UIButton){
         defaultTool = btn.tag
     }
     
-    func pay(){
+    @objc func pay(){
         
         let moneyS = priceTF.text
         

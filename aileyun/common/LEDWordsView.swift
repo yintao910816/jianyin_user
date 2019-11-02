@@ -97,7 +97,7 @@ class LEDWordsView: UIView {
             timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { [weak self](t) in
                 self?.findLabelTodisplay()
             })
-            RunLoop.main.add(timer!, forMode: RunLoopMode.commonModes)
+            RunLoop.main.add(timer!, forMode: .common)
         } else {
         }
     }

@@ -65,7 +65,7 @@ class LoginViewController: UIViewController {
             make.left.right.top.equalTo(containerV)
             make.height.equalTo(120)
         }
-        aileyunImgV.contentMode = UIViewContentMode.scaleAspectFit
+        aileyunImgV.contentMode = .scaleAspectFit
         
         let headL = UILabel()
         containerV.addSubview(headL)
@@ -125,12 +125,12 @@ class LoginViewController: UIViewController {
             make.width.equalTo(90)
             make.height.equalTo(30)
         }
-        verifyBtn.setTitle("获取验证码", for: UIControlState.normal)
+        verifyBtn.setTitle("获取验证码", for: .normal)
         verifyBtn.titleLabel?.font = UIFont.init(name: kReguleFont, size: 13)
         verifyBtn.backgroundColor = kDefaultThemeColor
         verifyBtn.layer.cornerRadius = 5
         
-        verifyBtn.addTarget(self, action: #selector(LoginViewController.startCount), for: UIControlEvents.touchUpInside)
+        verifyBtn.addTarget(self, action: #selector(LoginViewController.startCount), for: .touchUpInside)
         
         
         containerV.addSubview(verifyTF)
@@ -196,11 +196,11 @@ class LoginViewController: UIViewController {
             make.right.equalTo(containerV).offset(-40)
             make.height.equalTo(40)
         }
-        loginBtn.setTitle("登 录", for: UIControlState.normal)
+        loginBtn.setTitle("登 录", for: .normal)
         loginBtn.layer.cornerRadius = 10
         loginBtn.backgroundColor = kDefaultThemeColor
         
-        loginBtn.addTarget(self, action: #selector(LoginViewController.login), for: UIControlEvents.touchUpInside)
+        loginBtn.addTarget(self, action: #selector(LoginViewController.login), for: .touchUpInside)
         
         #if DEBUG
         cellphoneTF.text = "18672345930"
@@ -222,7 +222,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func checkForVoiceAction(){
+    @objc func checkForVoiceAction(){
         
         guard checkIsPhone(cellphoneTF.text!) else{
             HCShowError(info: "请输入正确的手机号码！")
@@ -265,14 +265,14 @@ class LoginViewController: UIViewController {
         })
     }
     
-    func voiceShowSecond(){
+    @objc func voiceShowSecond(){
         count = count + 1
         if count == KMaxSeconds {
             resetVoiceBtn()
             timer?.invalidate()
         }else{
             let showString = String.init(format: "%ds重新获取", KMaxSeconds - count)
-            infoBtn.setTitle(showString, for: UIControlState.normal)
+            infoBtn.setTitle(showString, for: .normal)
             infoBtn.setTitleColor(UIColor.white, for: .normal)
             infoBtn.backgroundColor = kLightTextColor
         }
@@ -280,14 +280,14 @@ class LoginViewController: UIViewController {
     
     func resetVoiceBtn(){
         infoBtn.isEnabled = true
-        infoBtn.setTitle("语音验证码", for: UIControlState.normal)
+        infoBtn.setTitle("语音验证码", for: .normal)
         infoBtn.setTitleColor(kDefaultThemeColor, for: .normal)
         infoBtn.backgroundColor = UIColor.white
     }
     
     
     
-    func startCount(){
+    @objc func startCount(){
         
         guard checkIsPhone(cellphoneTF.text!) else{
             HCShowError(info: "请输入正确的手机号码！")
@@ -317,14 +317,14 @@ class LoginViewController: UIViewController {
     }
     
     
-    func showSecond(){
+    @objc func showSecond(){
         count = count + 1
         if count == KMaxSeconds {
             resetCodeBtn()
             timer?.invalidate()
         }else{
             let showString = String.init(format: "%ds重新请求", KMaxSeconds - count)
-            verifyBtn.setTitle(showString, for: UIControlState.normal)
+            verifyBtn.setTitle(showString, for: .normal)
             verifyBtn.backgroundColor = kLightTextColor
         }
     }
@@ -332,11 +332,11 @@ class LoginViewController: UIViewController {
     
     func resetCodeBtn(){
         verifyBtn.isEnabled = true
-        verifyBtn.setTitle("获取验证码", for: UIControlState.normal)
+        verifyBtn.setTitle("获取验证码", for: .normal)
         verifyBtn.backgroundColor = kDefaultThemeColor
     }
     
-    func login(){
+    @objc func login(){
         
         guard cellphoneTF.text != "" && cellphoneTF.text != nil else {
             HCShowError(info: "请输入手机号码！")
@@ -371,11 +371,11 @@ class LoginViewController: UIViewController {
 
     func observeKeyboard() -> () {
         //注册键盘出现的通知
-        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         
     }
     
-    func keyboardShow() -> () {
+    @objc func keyboardShow() -> () {
         
         var rect = containerV.frame
         rect.origin.y = 0

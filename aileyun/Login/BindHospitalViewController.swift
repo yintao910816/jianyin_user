@@ -36,7 +36,7 @@ class BindHospitalViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
@@ -149,8 +149,8 @@ class BindHospitalViewController: UIViewController {
         }
         bindBtn.layer.cornerRadius = 5
         bindBtn.backgroundColor = kDefaultThemeColor
-        bindBtn.setTitle("认证", for: UIControlState.normal)
-        bindBtn.addTarget(self, action: #selector(BindHospitalViewController.bindHospital), for: UIControlEvents.touchUpInside)
+        bindBtn.setTitle("认证", for: .normal)
+        bindBtn.addTarget(self, action: #selector(BindHospitalViewController.bindHospital), for: .touchUpInside)
 
         
         let attentionL = UILabel()
@@ -163,7 +163,7 @@ class BindHospitalViewController: UIViewController {
         paraStyle.lineSpacing = 3
         paraStyle.paragraphSpacing = 3
         paraStyle.headIndent = 20
-        attStr.addAttribute(NSParagraphStyleAttributeName, value: paraStyle, range: NSRange.init(location: 0, length: attStr.length))
+        attStr.addAttribute(NSAttributedString.Key.paragraphStyle, value: paraStyle, range: NSRange.init(location: 0, length: attStr.length))
 
         attentionL.attributedText = attStr
         attentionL.sizeToFit()
@@ -181,7 +181,7 @@ class BindHospitalViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    func bindHospital(){
+    @objc func bindHospital(){
         
         guard nameTextF.text != "" && nameTextF.text != nil else {
             HCShowError(info: "请输入姓名！")
