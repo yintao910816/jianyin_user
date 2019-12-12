@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeBannerModel: NSObject {
+class HomeBannerModel: HJModel {
     
     var clickCount : String?
     var path : String?
@@ -21,14 +21,5 @@ class HomeBannerModel: NSObject {
     var order : String?
     var hospitalId : NSNumber?
     
-    
-    
-    // MARK:- 构造函数
-    init(_ dict : [String : Any]) {
-        super.init()
         
-        setValuesForKeys(dict)
-    }
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {}
-    
 }

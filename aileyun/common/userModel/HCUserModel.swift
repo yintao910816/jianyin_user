@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HCUserModel: NSObject {
+class HCUserModel: HJModel {
     
     var deviceType : String?
     var ip : String?
@@ -34,16 +34,6 @@ class HCUserModel: NSObject {
 
     
     var password : String?
-    
-    
-    convenience init(_ dic : [String : Any]) {
-        self.init()
-        setValuesForKeys(dic)
-    }
-    
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {
-        //
-    }
     
     
 }

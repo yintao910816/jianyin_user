@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserModel: NSObject {
+class UserModel: HJModel {
 
     var access_token : NSString?
     var expires_in : NSNumber?
@@ -16,14 +16,5 @@ class UserModel: NSObject {
     var refresh_token : NSString?
     var unionid : NSString?
 
-    
-    convenience init(_ dic : [String : Any]) {
-        self.init()
-        setValuesForKeys(dic)
-    }
-    
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {
-        //
-    }
-    
+        
 }

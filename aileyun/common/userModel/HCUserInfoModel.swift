@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HCUserInfoModel: NSObject {
+class HCUserInfoModel: HJModel {
     
     var token : String?
     var visitCard : String?
@@ -39,14 +39,5 @@ class HCUserInfoModel: NSObject {
     var findLastestTopics : String?
     var BBSToken : String?
     
-    
-    convenience init(_ dic : [String : Any]) {
-        self.init()
-        setValuesForKeys(dic)
-    }
-    
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {
-        //
-    }
     
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DoctorModel: NSObject {
+class DoctorModel: HJModel {
     
     
     var doctorId : NSNumber?
@@ -27,18 +27,5 @@ class DoctorModel: NSObject {
     var doctorRole : String?
     var docPrice : String?
     var goodProject : String?
-
-    
-    
-    
-    // MARK:- 构造函数
-    init(_ dict : [String : Any]) {
-        super.init()
-        
-        setValuesForKeys(dict)
-    }
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {}
-    
-
 
 }

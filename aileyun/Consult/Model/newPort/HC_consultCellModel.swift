@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HC_consultCellModel: NSObject {
+class HC_consultCellModel: HJModel {
     var type : String?
     
     var headImg : String?
@@ -33,12 +33,4 @@ class HC_consultCellModel: NSObject {
 
 
     
-    // MARK:- 构造函数
-    init(_ dict : [String : Any]) {
-        super.init()
-        
-        setValuesForKeys(dict)
-    }
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {}
-
 }

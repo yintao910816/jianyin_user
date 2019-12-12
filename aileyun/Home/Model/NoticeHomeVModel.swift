@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NoticeHomeVModel: NSObject {
+class NoticeHomeVModel: HJModel {
     
     
     var content : String = "您有新的通知提醒，点击查看详情"
@@ -21,13 +21,5 @@ class NoticeHomeVModel: NSObject {
     var type : NSNumber?
     var createTime : String?
     var url : String?
-
     
-    // MARK:- 构造函数
-    init(_ dict : [String : Any]) {
-        super.init()
-        
-        setValuesForKeys(dict)
-    }
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {}
 }

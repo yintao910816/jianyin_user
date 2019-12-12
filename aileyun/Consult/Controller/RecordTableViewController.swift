@@ -9,6 +9,7 @@
 import UIKit
 import MJRefresh
 import SVProgressHUD
+import HandyJSON
 
 protocol GetPhotoCenterDelegate : NSObjectProtocol {
     //设置协议方法
@@ -206,8 +207,9 @@ extension RecordTableViewController {
                 if let dicArr = dicArr {
                     var dataArr = [HC_consultArrModel]()
                     for i in dicArr{
-                        let model = HC_consultArrModel.mj_object(withKeyValues: i)
-                        dataArr.append(model!)
+                        if let model = JSONDeserializer<HC_consultArrModel>.deserializeFrom(dict: i) {
+                            dataArr.append(model)
+                        }
                     }
                     //保存模型
                     if self?.dataArr != nil {
@@ -252,7 +254,7 @@ extension RecordTableViewController {
             
             if let cont = secModel.content {
                 let tempdic = ["type" : TypeText, "content" : cont, "createTime" : secModel.createTime, "isDoctor" : "0", "headImg" : patientImg] as [String : Any]
-                let model = HC_consultCellModel.init(tempdic)
+                let model = JSONDeserializer<HC_consultCellModel>.deserializeFrom(dict: tempdic)
                 let viewmodel = HC_consultViewmodel.init()
                 viewmodel.model = model
                 secVMArr.append(viewmodel)
@@ -264,7 +266,7 @@ extension RecordTableViewController {
                     for i in arr{
                         if i != "" && i != nil {
                             let tempdic = ["type" : TypePic, "imageList" : i, "createTime" : secModel.createTime, "isDoctor" : "0", "headImg" : patientImg] as [String : Any]
-                            let model = HC_consultCellModel.init(tempdic)
+                            let model = JSONDeserializer<HC_consultCellModel>.deserializeFrom(dict: tempdic)
                             let viewmodel = HC_consultViewmodel.init()
                             viewmodel.model = model
                             secVMArr.append(viewmodel)
@@ -272,7 +274,7 @@ extension RecordTableViewController {
                     }
                 }else if imgS.hasSuffix(".jpg"){
                     let tempdic = ["type" : TypePic, "imageList" : imgS, "createTime" : secModel.createTime, "isDoctor" : "0", "headImg" : patientImg] as [String : Any]
-                    let model = HC_consultCellModel.init(tempdic)
+                    let model = JSONDeserializer<HC_consultCellModel>.deserializeFrom(dict: tempdic)
                     let viewmodel = HC_consultViewmodel.init()
                     viewmodel.model = model
                     secVMArr.append(viewmodel)
@@ -289,7 +291,7 @@ extension RecordTableViewController {
                 
                 if replyModel.content != nil && replyModel.content != ""{
                     let tempdic = ["type" : TypeText, "content" : replyModel.content, "createT" : replyModel.createTime, "isDoctor" : "1", "headImg" : secModel.doctorImg] as [String : Any]
-                    let model = HC_consultCellModel.init(tempdic)
+                    let model = JSONDeserializer<HC_consultCellModel>.deserializeFrom(dict: tempdic)
                     let viewmodel = HC_consultViewmodel.init()
                     viewmodel.model = model
                     secVMArr.append(viewmodel)
@@ -300,20 +302,20 @@ extension RecordTableViewController {
                         let arr = imgS.components(separatedBy: ",")
                         for i in arr{
                             let tempdic = ["type" : TypePic, "imageList" : i, "createT" : replyModel.createTime, "isDoctor" : "1", "headImg" : secModel.doctorImg] as [String : Any]
-                            let model = HC_consultCellModel.init(tempdic)
+                            let model = JSONDeserializer<HC_consultCellModel>.deserializeFrom(dict: tempdic)
                             let viewmodel = HC_consultViewmodel.init()
                             viewmodel.model = model
                             secVMArr.append(viewmodel)
                         }
                     }else if imgS.hasSuffix(".jpg"){
                         let tempdic = ["type" : TypePic, "imageList" : imgS, "createT" : replyModel.createTime, "isDoctor" : "1", "headImg" : secModel.doctorImg] as [String : Any]
-                        let model = HC_consultCellModel.init(tempdic)
+                        let model = JSONDeserializer<HC_consultCellModel>.deserializeFrom(dict: tempdic)
                         let viewmodel = HC_consultViewmodel.init()
                         viewmodel.model = model
                         secVMArr.append(viewmodel)
                     }else if imgS.hasSuffix(".amr"){
                         let tempdic = ["type" : TypeVoice, "imageList" : imgS, "createT" : replyModel.createTime, "isDoctor" : "1", "headImg" : secModel.doctorImg] as [String : Any]
-                        let model = HC_consultCellModel.init(tempdic)
+                        let model = JSONDeserializer<HC_consultCellModel>.deserializeFrom(dict: tempdic)
                         let viewmodel = HC_consultViewmodel.init()
                         viewmodel.model = model
                         secVMArr.append(viewmodel)

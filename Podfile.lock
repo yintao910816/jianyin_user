@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - HandyJSON (5.0.0)
   - MJExtension (3.2.0)
   - MJRefresh (3.2.0)
   - SDWebImage (5.2.2):
@@ -26,6 +27,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - HandyJSON (~> 5.0.0-beta.1)
   - MJExtension
   - MJRefresh
   - SDWebImage
@@ -37,6 +39,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - HandyJSON
     - MJExtension
     - MJRefresh
     - SDWebImage
@@ -47,6 +50,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
   MJExtension: e22bed65fdcd38e957242982b7384f2984c9088e
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   SDWebImage: 5fcdb02cc35e05fc35791ec514b191d27189f872
@@ -55,6 +59,6 @@ SPEC CHECKSUMS:
   UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
   WechatOpenSDK: 368ae03b72ee3ea1328c4f11326fbb5d2721d118
 
-PODFILE CHECKSUM: b08be17114d4aa94a49746bad0e7ef1d288e6f04
+PODFILE CHECKSUM: a02eefda76170902bc8ca431da5e32566c1b5ef2
 
 COCOAPODS: 1.8.3

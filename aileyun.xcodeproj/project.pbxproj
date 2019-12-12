@@ -334,8 +334,6 @@
 		3CF697AB2092FCE900B31099 /* libUMSPosPayOnly.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF697A22092FCE900B31099 /* libUMSPosPayOnly.a */; };
 		3CF697AC2092FCE900B31099 /* PosPay_Resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3CF697A32092FCE900B31099 /* PosPay_Resource.bundle */; };
 		3CF697AD2092FCE900B31099 /* UMSSecKeyboardLibResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3CF697A42092FCE900B31099 /* UMSSecKeyboardLibResource.bundle */; };
-		3CF697AE2092FCE900B31099 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF697A62092FCE900B31099 /* libWeChatSDK.a */; };
-		3CF697AF2092FCE900B31099 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3CF697A72092FCE900B31099 /* README.txt */; };
 		3CF697B12092FE4900B31099 /* UnifyPayPluginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF697B02092FE4900B31099 /* UnifyPayPluginManager.swift */; };
 		3CF6E19A1F4AD4F900E81896 /* ConsultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6E1991F4AD4F900E81896 /* ConsultViewController.swift */; };
 		3CF6E19C1F4AD70F00E81896 /* ConsultViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6E19B1F4AD70F00E81896 /* ConsultViewCell.swift */; };
@@ -349,10 +347,12 @@
 		3CFAAEFE1F5013C600096D98 /* HC_consultCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFAAEFD1F5013C600096D98 /* HC_consultCellModel.swift */; };
 		3CFAAF001F50170800096D98 /* HC_consultViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFAAEFF1F50170800096D98 /* HC_consultViewmodel.swift */; };
 		3CFADBD31F6908B2008E3E1E /* noData.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CFADBD11F6908B2008E3E1E /* noData.png */; };
+		B82D2FF323732DC50099A6F6 /* libUMessage_Sdk_1.5.0a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B82D2FF223732DC50099A6F6 /* libUMessage_Sdk_1.5.0a.a */; };
 		B86CC4C621DFC5920038D5D2 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B86CC4C421DFC5920038D5D2 /* libopencore-amrwb.a */; };
 		B86CC4C721DFC5920038D5D2 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B86CC4C521DFC5920038D5D2 /* libopencore-amrnb.a */; };
 		B8711EC42178606F00F60C76 /* RechargeResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8711EC22178606F00F60C76 /* RechargeResultViewController.swift */; };
 		B8711EC52178606F00F60C76 /* RechargeResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8711EC32178606F00F60C76 /* RechargeResultViewController.xib */; };
+		B8CD926123A283FC00C9C061 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CD926023A283FC00C9C061 /* BaseModel.swift */; };
 		B8D2953021D7A2FC00A1BD52 /* VideoCaptureDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D2951521D7A2FC00A1BD52 /* VideoCaptureDevice.m */; };
 		B8D2953121D7A2FC00A1BD52 /* IDLFaceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D2951721D7A2FC00A1BD52 /* IDLFaceSDK.framework */; };
 		B8D2953221D7A2FC00A1BD52 /* idl-license.face-ios in Resources */ = {isa = PBXBuildFile; fileRef = B8D2951821D7A2FC00A1BD52 /* idl-license.face-ios */; };
@@ -730,11 +730,6 @@
 		3CF697A22092FCE900B31099 /* libUMSPosPayOnly.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMSPosPayOnly.a; sourceTree = "<group>"; };
 		3CF697A32092FCE900B31099 /* PosPay_Resource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PosPay_Resource.bundle; sourceTree = "<group>"; };
 		3CF697A42092FCE900B31099 /* UMSSecKeyboardLibResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSSecKeyboardLibResource.bundle; sourceTree = "<group>"; };
-		3CF697A62092FCE900B31099 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
-		3CF697A72092FCE900B31099 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		3CF697A82092FCE900B31099 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
-		3CF697A92092FCE900B31099 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		3CF697AA2092FCE900B31099 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		3CF697B02092FE4900B31099 /* UnifyPayPluginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifyPayPluginManager.swift; sourceTree = "<group>"; };
 		3CF6E1991F4AD4F900E81896 /* ConsultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultViewController.swift; sourceTree = "<group>"; };
 		3CF6E19B1F4AD70F00E81896 /* ConsultViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultViewCell.swift; sourceTree = "<group>"; };
@@ -749,10 +744,12 @@
 		3CFAAEFF1F50170800096D98 /* HC_consultViewmodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HC_consultViewmodel.swift; sourceTree = "<group>"; };
 		3CFADBD11F6908B2008E3E1E /* noData.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noData.png; sourceTree = "<group>"; };
 		6D2808A40648D35BFB8F8A19 /* Pods-aileyun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aileyun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aileyun/Pods-aileyun.debug.xcconfig"; sourceTree = "<group>"; };
+		B82D2FF223732DC50099A6F6 /* libUMessage_Sdk_1.5.0a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMessage_Sdk_1.5.0a.a; sourceTree = "<group>"; };
 		B86CC4C421DFC5920038D5D2 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
 		B86CC4C521DFC5920038D5D2 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
 		B8711EC22178606F00F60C76 /* RechargeResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RechargeResultViewController.swift; sourceTree = "<group>"; };
 		B8711EC32178606F00F60C76 /* RechargeResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RechargeResultViewController.xib; sourceTree = "<group>"; };
+		B8CD926023A283FC00C9C061 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		B8D2951421D7A2FC00A1BD52 /* VideoCaptureDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCaptureDevice.h; sourceTree = "<group>"; };
 		B8D2951521D7A2FC00A1BD52 /* VideoCaptureDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCaptureDevice.m; sourceTree = "<group>"; };
 		B8D2951721D7A2FC00A1BD52 /* IDLFaceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IDLFaceSDK.framework; sourceTree = "<group>"; };
@@ -793,6 +790,7 @@
 				3C821EB81F25C3FB005C976D /* UIKit.framework in Frameworks */,
 				3C8158AD208DAF4C008DA859 /* TencentOpenAPI.framework in Frameworks */,
 				3C1220DE1EFB5C64000BD52D /* CoreGraphics.framework in Frameworks */,
+				B82D2FF323732DC50099A6F6 /* libUMessage_Sdk_1.5.0a.a in Frameworks */,
 				3C821EB61F25C3E7005C976D /* CoreText.framework in Frameworks */,
 				3C821EB41F25C3DA005C976D /* QuartzCore.framework in Frameworks */,
 				3C1220E21EFB5C92000BD52D /* CoreTelephony.framework in Frameworks */,
@@ -801,7 +799,6 @@
 				3C821EB21F25C3BC005C976D /* libz.tbd in Frameworks */,
 				3C821EB01F25C3B2005C976D /* libc++.tbd in Frameworks */,
 				3C821EAD1F25C381005C976D /* AlipaySDK.framework in Frameworks */,
-				3CF697AE2092FCE900B31099 /* libWeChatSDK.a in Frameworks */,
 				3C1220E01EFB5C79000BD52D /* libsqlite3.tbd in Frameworks */,
 				3C1220DA1EFB5C47000BD52D /* libiconv.tbd in Frameworks */,
 				F666A4136C77989F16603994 /* Pods_aileyun.framework in Frameworks */,
@@ -1112,6 +1109,7 @@
 				3C1577FA1F4EA01B00320299 /* DoctorAttentionModel.swift */,
 				3CD7D8EE1F4C1E6300420F4B /* messageGroupModel.swift */,
 				3CD7D8F41F4C32E100420F4B /* MessageDetailModel.swift */,
+				B8CD926023A283FC00C9C061 /* BaseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1502,6 +1500,7 @@
 		3C8B0BC01F3C52F800611AF2 /* UMessage_Sdk_1.5.0a */ = {
 			isa = PBXGroup;
 			children = (
+				B82D2FF223732DC50099A6F6 /* libUMessage_Sdk_1.5.0a.a */,
 				3C8B0BC21F3C52F800611AF2 /* UMessage.h */,
 			);
 			path = UMessage_Sdk_1.5.0a;
@@ -1546,7 +1545,6 @@
 				3CF697A22092FCE900B31099 /* libUMSPosPayOnly.a */,
 				3CF697A32092FCE900B31099 /* PosPay_Resource.bundle */,
 				3CF697A42092FCE900B31099 /* UMSSecKeyboardLibResource.bundle */,
-				3CF697A52092FCE900B31099 /* WeChat */,
 			);
 			path = libUMSUnifyPay;
 			sourceTree = "<group>";
@@ -1569,18 +1567,6 @@
 				3CF697A12092FCE900B31099 /* UMSPPPayVersionsInfo.h */,
 			);
 			path = UMSPosPayOnly;
-			sourceTree = "<group>";
-		};
-		3CF697A52092FCE900B31099 /* WeChat */ = {
-			isa = PBXGroup;
-			children = (
-				3CF697A62092FCE900B31099 /* libWeChatSDK.a */,
-				3CF697A72092FCE900B31099 /* README.txt */,
-				3CF697A82092FCE900B31099 /* WechatAuthSDK.h */,
-				3CF697A92092FCE900B31099 /* WXApi.h */,
-				3CF697AA2092FCE900B31099 /* WXApiObject.h */,
-			);
-			path = WeChat;
 			sourceTree = "<group>";
 		};
 		3CF9D51B1F6FC138002E89A9 /* DataProvide */ = {
@@ -1848,7 +1834,6 @@
 				3C51A9891F0B63D6004ED84B /* 收起@3x.png in Resources */,
 				3C3D78831EF3D17900DE6F46 /* Consult@3x.png in Resources */,
 				3C480C421FB989B000525309 /* 诊@3x.png in Resources */,
-				3CF697AF2092FCE900B31099 /* README.txt in Resources */,
 				B8D2953221D7A2FC00A1BD52 /* idl-license.face-ios in Resources */,
 				3C30E8791F34053200E35AC9 /* 地址@2x.png in Resources */,
 				3CBF56FB20A44D4A00CED236 /* treat_HL@3x.png in Resources */,
@@ -1999,6 +1984,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-aileyun/Pods-aileyun-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -2008,6 +1994,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -2099,6 +2086,7 @@
 				3CAB713C1F725729002A61D7 /* EqualSpaceFlowLayout.swift in Sources */,
 				3C5E35A51EF7796200F08575 /* UserModel.swift in Sources */,
 				3C5E359A1EF7786A00F08575 /* HttpClient.swift in Sources */,
+				B8CD926123A283FC00C9C061 /* BaseModel.swift in Sources */,
 				3C69B38D1EF9202B0068355D /* selectView.swift in Sources */,
 				B8D2953021D7A2FC00A1BD52 /* VideoCaptureDevice.m in Sources */,
 				3C0085461F31B9C1009BCCC6 /* HospitalListViewController.swift in Sources */,
@@ -2292,7 +2280,7 @@
 				CODE_SIGN_ENTITLEMENTS = aileyun/aileyun.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9XV6P3KK2R;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2315,6 +2303,7 @@
 					"$(PROJECT_DIR)/aileyun/tools/VoiceConvert/lib",
 					"$(PROJECT_DIR)/aileyun/tools/libUMSUnifyPay",
 					"$(PROJECT_DIR)/aileyun/tools/libUMSUnifyPay/WeChat",
+					"$(PROJECT_DIR)/aileyun/tools/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -2366,8 +2355,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = aileyun/aileyun.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 9XV6P3KK2R;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2390,6 +2379,7 @@
 					"$(PROJECT_DIR)/aileyun/tools/VoiceConvert/lib",
 					"$(PROJECT_DIR)/aileyun/tools/libUMSUnifyPay",
 					"$(PROJECT_DIR)/aileyun/tools/libUMSUnifyPay/WeChat",
+					"$(PROJECT_DIR)/aileyun/tools/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -2426,7 +2416,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xynet.PocketJoyUsers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = jiayin_user_dev_pro;
 				SWIFT_OBJC_BRIDGING_HEADER = aileyun/Bridge.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

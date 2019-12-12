@@ -8,7 +8,8 @@
 
 import UIKit
 import SVProgressHUD
-
+import HandyJSON
+ 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, WXApiDelegate{
 
@@ -32,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WXApiDelegate{
         let dic = UserDefaults.standard.value(forKey: kUserDic) as? [String : Any]
         
         if let dic = dic{
-            UserManager.shareIntance.HCUser = HCUserModel.init(dic)
+            UserManager.shareIntance.HCUser = JSONDeserializer<HCUserModel>.deserializeFrom(dict: dic)
             Login = true
         }else{
             Login = false
@@ -49,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WXApiDelegate{
         HCPrint(message: FaceSDKManager.sharedInstance()?.canWork())
         HCPrint(message: FaceVerifier.sharedInstance()?.getVersion())
 
-        WXApi.registerApp(weixinAppid)
+//        WXApi.registerApp(weixinAppid)
         
         UMeng(launchOptions: launchOptions)
         

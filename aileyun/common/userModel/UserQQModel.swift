@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserQQModel: NSObject {
+class UserQQModel: HJModel {
 
     
     var nickname : NSString?
@@ -19,14 +19,4 @@ class UserQQModel: NSObject {
     var openId : String?
     var expirationDate : Date?
     
-    
-    convenience init(_ dic : [String : Any]) {
-        self.init()
-        setValuesForKeys(dic)
-    }
-    
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {
-        //
-    }
-
 }

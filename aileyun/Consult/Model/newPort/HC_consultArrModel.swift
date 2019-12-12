@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HC_consultArrModel: NSObject {
+class HC_consultArrModel: HJModel {
     
     var doctorId : NSNumber?
     var imageList : String?
@@ -27,9 +27,6 @@ class HC_consultArrModel: NSObject {
     var feeTimes : NSNumber?
     var createTime : NSNumber?
     var docPrice : String?
-    
-    override static func mj_objectClassInArray() -> [AnyHashable : Any]! {
-        return ["replyList" : HC_consultListModel.classForCoder()]
-    }
 
+    
 }

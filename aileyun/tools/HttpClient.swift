@@ -9,6 +9,7 @@
 import UIKit
 import AFNetworking
 import SVProgressHUD
+import HandyJSON
 
 class HttpClient {
     
@@ -602,7 +603,7 @@ extension HttpClient {
                 //
             }, success: { (task, any) in
                 let dic = any as! Dictionary<String, Any>
-                UserManager.shareIntance.UserInfoModel = UserInfoModel.init(dic)
+                UserManager.shareIntance.UserInfoModel = JSONDeserializer<UserInfoModel>.deserializeFrom(dict: dic)
                 HCPrint(message: dic)
             }, failure: { (task, err) in
                 HCPrint(message: err)

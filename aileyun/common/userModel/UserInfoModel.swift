@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserInfoModel: NSObject {
+class UserInfoModel: HJModel {
     
     var city : NSString?
     var headimgurl : NSString?
@@ -26,14 +26,4 @@ class UserInfoModel: NSObject {
     //密码设置
     var password : NSString?
     
-    
-    convenience init(_ dic : [String : Any]) {
-        self.init()
-        setValuesForKeys(dic)
-    }
-    
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {
-        //
-    }
-
 }

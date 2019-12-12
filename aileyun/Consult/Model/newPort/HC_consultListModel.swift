@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HC_consultListModel: NSObject {
+class HC_consultListModel: HJModel {
 
     var content : String?
     var consultationId : NSNumber?

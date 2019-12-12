@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LocalUserModel: NSObject {
+class LocalUserModel: HJModel {
     
     var headImg : NSString?
     var nickName : NSString?
@@ -19,14 +19,6 @@ class LocalUserModel: NSObject {
     //额外
     var phone : String?
     
-    convenience init(_ dic : [String : Any]) {
-        self.init()
-        setValuesForKeys(dic)
-    }
-    
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {
-        //
-    }
 }
 
 

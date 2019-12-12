@@ -8,7 +8,7 @@
 
 import UIKit
 
-class weixinPrepayModel: NSObject {
+class weixinPrepayModel: HJModel {
     
     var appid : String?
     var partnerid : String?
@@ -18,13 +18,5 @@ class weixinPrepayModel: NSObject {
     var sign : String?
     var packageValue : String?
     
-    // MARK:- 构造函数
-    init(_ dict : [String : Any]) {
-        super.init()
-        
-        setValuesForKeys(dict)
-    }
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {}
-
 
 }

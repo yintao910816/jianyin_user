@@ -8,6 +8,7 @@
 
 import UIKit
 import SVProgressHUD
+import HandyJSON
 
 class BindHospitalViewController: UIViewController {
     
@@ -48,7 +49,8 @@ class BindHospitalViewController: UIViewController {
     
     func setModel(){
         let dic = NSDictionary.init(dictionary: ["id" : "191", "name" : "新疆佳音"])
-        hospitalModel = HospitalListModel.init(dic as! [String : Any])
+        hospitalModel = JSONDeserializer<HospitalListModel>.deserializeFrom(dict: dic)
+
     }
     
     func setData(){
