@@ -15,6 +15,8 @@ class HCDataProvideTool: NSObject {
     private var pageNum: Int = 1
     private let pageSize: Int = 10
     
+    public var dataReloadCallBack: (([HCCircleModel]?)->())?
+    
     // 设计成单例
     static let shareIntance : HCDataProvideTool = {
         let tools = HCDataProvideTool()
@@ -26,6 +28,7 @@ class HCDataProvideTool: NSObject {
         HttpRequestManager.shareIntance.HC_findLastestTopics(callback: { [unowned self](success, arr, msg) in
             if success == true {
                 self.circleData = arr!
+                self.dataReloadCallBack?(self.circleData)
             }else{
                 self.pageNum = 1
             }
@@ -37,6 +40,7 @@ class HCDataProvideTool: NSObject {
         HttpRequestManager.shareIntance.HC_findLastestTopics(pageNum: pageNum, pageSize: pageSize) { [unowned self] (success, arr, msg) in
             if success == true {
                 self.circleData?.append(contentsOf: arr!)
+                self.dataReloadCallBack?(self.circleData)
             }else{
                 if self.pageNum > 1 { self.pageNum -= 1 }
             }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HCCircleModel: NSObject {
+class HCCircleModel: HJModel {
     
     var seo_description : String?
     var views_number : NSNumber?
@@ -30,12 +30,4 @@ class HCCircleModel: NSObject {
     
     var url : String?
 
-
-    // MARK:- 构造函数
-    init(_ dict : [String : Any]) {
-        super.init()
-        
-        setValuesForKeys(dict)
-    }
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {}
 }

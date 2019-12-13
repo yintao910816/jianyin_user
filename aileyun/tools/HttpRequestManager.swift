@@ -1012,9 +1012,10 @@ class HttpRequestManager {
                 
                 var modelArr = [HCCircleModel]()
                 for dic in dicArr {
-                    let model = HCCircleModel.init(dic)
+                    if let model = JSONDeserializer<HCCircleModel>.deserializeFrom(dict: dic) {
 //                    FindRealClassForDicValue(dic: dic)
-                    modelArr.append(model)
+                        modelArr.append(model)
+                    }
                 }
                 callback(true, modelArr, ccb.msg)
             }else{

@@ -2345,6 +2345,7 @@
 					"$(PROJECT_DIR)/aileyun/tools/libUMSUnifyPay/UMSPosPay",
 					"$(PROJECT_DIR)/aileyun/tools/libUMSUnifyPay/UPPaymentControl",
 				);
+				MARKETING_VERSION = 3.6;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -2423,6 +2424,7 @@
 					"$(PROJECT_DIR)/aileyun/tools/libUMSUnifyPay/UMSPosPay",
 					"$(PROJECT_DIR)/aileyun/tools/libUMSUnifyPay/UPPaymentControl",
 				);
+				MARKETING_VERSION = 3.6;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

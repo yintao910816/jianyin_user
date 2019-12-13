@@ -81,7 +81,6 @@ class HomeTableViewController: BaseViewController {
     }()
     
     
-    var mycontext = 0
     var circleArr : [HCCircleModel]?{
         didSet{
             tableV.reloadData()
@@ -113,7 +112,10 @@ class HomeTableViewController: BaseViewController {
         
         initUI()
         
-        HCDataProvideTool.shareIntance.addObserver(self, forKeyPath: "circleData", options: NSKeyValueObservingOptions.new, context: &mycontext)
+        HCDataProvideTool.shareIntance.dataReloadCallBack = { [weak self] data in
+            self?.circleArr = data
+            self?.tableV.mj_footer.endRefreshing()
+        }
         
         self.tableV.mj_header.beginRefreshing()
         
@@ -121,7 +123,6 @@ class HomeTableViewController: BaseViewController {
     }
     
     deinit {
-        HCDataProvideTool.shareIntance.removeObserver(self, forKeyPath: "circleData", context: &mycontext)
         NotificationCenter.default.removeObserver(self)
     }
     
@@ -382,16 +383,6 @@ class HomeTableViewController: BaseViewController {
 
 
 extension HomeTableViewController {
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if context == &mycontext {
-            if let newValue = change?[NSKeyValueChangeKey.newKey] {
-                let arr = newValue as! [HCCircleModel]
-                circleArr = arr
-                
-                tableV.mj_footer.endRefreshing()
-            }
-        }
-    }
     
     //专家指导
     @objc func treatFlow(){
