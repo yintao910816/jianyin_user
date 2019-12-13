@@ -50,8 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WXApiDelegate{
         HCPrint(message: FaceSDKManager.sharedInstance()?.canWork())
         HCPrint(message: FaceVerifier.sharedInstance()?.getVersion())
 
-//        WXApi.registerApp(weixinAppid)
-        
+        WXApi.registerApp(weixinAppid)
+
         UMeng(launchOptions: launchOptions)
         
         let rect = UIScreen.main.bounds

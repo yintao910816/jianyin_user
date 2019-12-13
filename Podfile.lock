@@ -23,7 +23,6 @@ PODS:
   - SnapKit (4.2.0)
   - SVProgressHUD (2.2.5)
   - UMengAnalytics-NO-IDFA (4.2.5)
-  - WechatOpenSDK (1.8.6)
 
 DEPENDENCIES:
   - AFNetworking
@@ -34,7 +33,6 @@ DEPENDENCIES:
   - SnapKit
   - SVProgressHUD
   - UMengAnalytics-NO-IDFA
-  - WechatOpenSDK
 
 SPEC REPOS:
   trunk:
@@ -46,7 +44,6 @@ SPEC REPOS:
     - SnapKit
     - SVProgressHUD
     - UMengAnalytics-NO-IDFA
-    - WechatOpenSDK
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -57,8 +54,7 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
-  WechatOpenSDK: 368ae03b72ee3ea1328c4f11326fbb5d2721d118
 
-PODFILE CHECKSUM: a02eefda76170902bc8ca431da5e32566c1b5ef2
+PODFILE CHECKSUM: 327e3c9df9ae4ee9135a6d5a7680791e48cca691
 
 COCOAPODS: 1.8.3

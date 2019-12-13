@@ -51,8 +51,12 @@ let shareURL = "http://t.cn/RYUiDdR"
 let kDefaultThemeColor = UIColor.init(red: 183/255.0, green: 161/255.0, blue: 133/255.0, alpha: 1)
 
 //第三方登录  爱乐孕相关APPID
-let weixinAppid = "wx57dfbdf6043ccd7a"
+//let weixinAppid = "wx57dfbdf6043ccd7a"
+//let weixinSecret = "ed3fb7e5dd01ed10b77811dd6fb917d6"
+
+let weixinAppid = "wx2c38d1faa181612e"
 let weixinSecret = "ed3fb7e5dd01ed10b77811dd6fb917d6"
+
 let tencentAppid = "1106159775"
 
 let kRegisterURL = "ME_SUBSCRIBE_LIST_2017"

@@ -331,9 +331,6 @@
 		3CF0D7E11F70FD6E0019B108 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF0D7E01F70FD6E0019B108 /* TagCollectionViewCell.swift */; };
 		3CF12B8D1F55731000745F17 /* SearchDocViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF12B8C1F55731000745F17 /* SearchDocViewController.swift */; };
 		3CF25A211F0E0FF600874413 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF25A201F0E0FF600874413 /* BaseNavigationController.swift */; };
-		3CF697AB2092FCE900B31099 /* libUMSPosPayOnly.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF697A22092FCE900B31099 /* libUMSPosPayOnly.a */; };
-		3CF697AC2092FCE900B31099 /* PosPay_Resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3CF697A32092FCE900B31099 /* PosPay_Resource.bundle */; };
-		3CF697AD2092FCE900B31099 /* UMSSecKeyboardLibResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3CF697A42092FCE900B31099 /* UMSSecKeyboardLibResource.bundle */; };
 		3CF697B12092FE4900B31099 /* UnifyPayPluginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF697B02092FE4900B31099 /* UnifyPayPluginManager.swift */; };
 		3CF6E19A1F4AD4F900E81896 /* ConsultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6E1991F4AD4F900E81896 /* ConsultViewController.swift */; };
 		3CF6E19C1F4AD70F00E81896 /* ConsultViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF6E19B1F4AD70F00E81896 /* ConsultViewCell.swift */; };
@@ -367,6 +364,12 @@
 		B8D2953B21D7A2FC00A1BD52 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D2952721D7A2FC00A1BD52 /* CircleView.m */; };
 		B8D2953C21D7A2FC00A1BD52 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D2952821D7A2FC00A1BD52 /* ViewController.m */; };
 		B8D2953D21D7A2FC00A1BD52 /* LivingConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D2952B21D7A2FC00A1BD52 /* LivingConfigViewController.m */; };
+		B8E3C9EE23A3D07A002DEE2D /* libUMSPosPay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E3C9E823A3D07A002DEE2D /* libUMSPosPay.a */; };
+		B8E3C9EF23A3D07A002DEE2D /* PosPay_Resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B8E3C9E923A3D07A002DEE2D /* PosPay_Resource.bundle */; };
+		B8E3C9F023A3D07A002DEE2D /* UMSSecKeyboardLibResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B8E3C9EA23A3D07A002DEE2D /* UMSSecKeyboardLibResource.bundle */; };
+		B8E3C9F123A3D07A002DEE2D /* libPaymentControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E3C9ED23A3D07A002DEE2D /* libPaymentControl.a */; };
+		B8EB075023A3D0FD003C7CF1 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = B8EB074D23A3D0FD003C7CF1 /* README.txt */; };
+		B8EB075123A3D0FD003C7CF1 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EB074F23A3D0FD003C7CF1 /* libWeChatSDK.a */; };
 		F666A4136C77989F16603994 /* Pods_aileyun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E253F5689AE7ECF7180033EA /* Pods_aileyun.framework */; };
 /* End PBXBuildFile section */
 
@@ -722,14 +725,6 @@
 		3CF0D7E01F70FD6E0019B108 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		3CF12B8C1F55731000745F17 /* SearchDocViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDocViewController.swift; sourceTree = "<group>"; };
 		3CF25A201F0E0FF600874413 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
-		3CF6979D2092FCE900B31099 /* UMSPPPayFastPay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSPPPayFastPay.h; sourceTree = "<group>"; };
-		3CF6979E2092FCE900B31099 /* UMSPPPayOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSPPPayOrder.h; sourceTree = "<group>"; };
-		3CF6979F2092FCE900B31099 /* UMSPPPayPosPay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSPPPayPosPay.h; sourceTree = "<group>"; };
-		3CF697A02092FCE900B31099 /* UMSPPPayUnifyPayPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSPPPayUnifyPayPlugin.h; sourceTree = "<group>"; };
-		3CF697A12092FCE900B31099 /* UMSPPPayVersionsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSPPPayVersionsInfo.h; sourceTree = "<group>"; };
-		3CF697A22092FCE900B31099 /* libUMSPosPayOnly.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMSPosPayOnly.a; sourceTree = "<group>"; };
-		3CF697A32092FCE900B31099 /* PosPay_Resource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PosPay_Resource.bundle; sourceTree = "<group>"; };
-		3CF697A42092FCE900B31099 /* UMSSecKeyboardLibResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSSecKeyboardLibResource.bundle; sourceTree = "<group>"; };
 		3CF697B02092FE4900B31099 /* UnifyPayPluginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifyPayPluginManager.swift; sourceTree = "<group>"; };
 		3CF6E1991F4AD4F900E81896 /* ConsultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultViewController.swift; sourceTree = "<group>"; };
 		3CF6E19B1F4AD70F00E81896 /* ConsultViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultViewCell.swift; sourceTree = "<group>"; };
@@ -775,6 +770,22 @@
 		B8D2952E21D7A2FC00A1BD52 /* RemindView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindView.h; sourceTree = "<group>"; };
 		B8D2952F21D7A2FC00A1BD52 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B8D2953E21D7A34700A1BD52 /* FaceParameterConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceParameterConfig.h; sourceTree = "<group>"; };
+		B8E3C9E223A3D07A002DEE2D /* UMSPPPayUnifyPayPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSPPPayUnifyPayPlugin.h; sourceTree = "<group>"; };
+		B8E3C9E323A3D07A002DEE2D /* UMSPPPayFastPay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSPPPayFastPay.h; sourceTree = "<group>"; };
+		B8E3C9E423A3D07A002DEE2D /* UMSPPPayOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSPPPayOrder.h; sourceTree = "<group>"; };
+		B8E3C9E523A3D07A002DEE2D /* UMSPPPayVersionsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSPPPayVersionsInfo.h; sourceTree = "<group>"; };
+		B8E3C9E623A3D07A002DEE2D /* UMSPPPayPluginSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSPPPayPluginSettings.h; sourceTree = "<group>"; };
+		B8E3C9E723A3D07A002DEE2D /* UMSPPPayPosPay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSPPPayPosPay.h; sourceTree = "<group>"; };
+		B8E3C9E823A3D07A002DEE2D /* libUMSPosPay.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMSPosPay.a; sourceTree = "<group>"; };
+		B8E3C9E923A3D07A002DEE2D /* PosPay_Resource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PosPay_Resource.bundle; sourceTree = "<group>"; };
+		B8E3C9EA23A3D07A002DEE2D /* UMSSecKeyboardLibResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSSecKeyboardLibResource.bundle; sourceTree = "<group>"; };
+		B8E3C9EC23A3D07A002DEE2D /* UPPaymentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPPaymentControl.h; sourceTree = "<group>"; };
+		B8E3C9ED23A3D07A002DEE2D /* libPaymentControl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPaymentControl.a; sourceTree = "<group>"; };
+		B8EB074B23A3D0FD003C7CF1 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		B8EB074C23A3D0FD003C7CF1 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		B8EB074D23A3D0FD003C7CF1 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		B8EB074E23A3D0FD003C7CF1 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		B8EB074F23A3D0FD003C7CF1 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		E253F5689AE7ECF7180033EA /* Pods_aileyun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aileyun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -787,7 +798,9 @@
 				3C821EBE1F25C41C005C976D /* CoreMotion.framework in Frameworks */,
 				3C821EBC1F25C414005C976D /* CFNetwork.framework in Frameworks */,
 				3C821EBA1F25C405005C976D /* Foundation.framework in Frameworks */,
+				B8E3C9EE23A3D07A002DEE2D /* libUMSPosPay.a in Frameworks */,
 				3C821EB81F25C3FB005C976D /* UIKit.framework in Frameworks */,
+				B8EB075123A3D0FD003C7CF1 /* libWeChatSDK.a in Frameworks */,
 				3C8158AD208DAF4C008DA859 /* TencentOpenAPI.framework in Frameworks */,
 				3C1220DE1EFB5C64000BD52D /* CoreGraphics.framework in Frameworks */,
 				B82D2FF323732DC50099A6F6 /* libUMessage_Sdk_1.5.0a.a in Frameworks */,
@@ -800,10 +813,10 @@
 				3C821EB01F25C3B2005C976D /* libc++.tbd in Frameworks */,
 				3C821EAD1F25C381005C976D /* AlipaySDK.framework in Frameworks */,
 				3C1220E01EFB5C79000BD52D /* libsqlite3.tbd in Frameworks */,
+				B8E3C9F123A3D07A002DEE2D /* libPaymentControl.a in Frameworks */,
 				3C1220DA1EFB5C47000BD52D /* libiconv.tbd in Frameworks */,
 				F666A4136C77989F16603994 /* Pods_aileyun.framework in Frameworks */,
 				B86CC4C621DFC5920038D5D2 /* libopencore-amrwb.a in Frameworks */,
-				3CF697AB2092FCE900B31099 /* libUMSPosPayOnly.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1541,32 +1554,11 @@
 		3CF6979A2092FCE900B31099 /* libUMSUnifyPay */ = {
 			isa = PBXGroup;
 			children = (
-				3CF6979B2092FCE900B31099 /* include */,
-				3CF697A22092FCE900B31099 /* libUMSPosPayOnly.a */,
-				3CF697A32092FCE900B31099 /* PosPay_Resource.bundle */,
-				3CF697A42092FCE900B31099 /* UMSSecKeyboardLibResource.bundle */,
+				B8EB074A23A3D0FD003C7CF1 /* WeChat */,
+				B8E3C9E023A3D07A002DEE2D /* UMSPosPay */,
+				B8E3C9EB23A3D07A002DEE2D /* UPPaymentControl */,
 			);
 			path = libUMSUnifyPay;
-			sourceTree = "<group>";
-		};
-		3CF6979B2092FCE900B31099 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				3CF6979C2092FCE900B31099 /* UMSPosPayOnly */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		3CF6979C2092FCE900B31099 /* UMSPosPayOnly */ = {
-			isa = PBXGroup;
-			children = (
-				3CF6979D2092FCE900B31099 /* UMSPPPayFastPay.h */,
-				3CF6979E2092FCE900B31099 /* UMSPPPayOrder.h */,
-				3CF6979F2092FCE900B31099 /* UMSPPPayPosPay.h */,
-				3CF697A02092FCE900B31099 /* UMSPPPayUnifyPayPlugin.h */,
-				3CF697A12092FCE900B31099 /* UMSPPPayVersionsInfo.h */,
-			);
-			path = UMSPosPayOnly;
 			sourceTree = "<group>";
 		};
 		3CF9D51B1F6FC138002E89A9 /* DataProvide */ = {
@@ -1676,6 +1668,51 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		B8E3C9E023A3D07A002DEE2D /* UMSPosPay */ = {
+			isa = PBXGroup;
+			children = (
+				B8E3C9E123A3D07A002DEE2D /* include */,
+				B8E3C9E823A3D07A002DEE2D /* libUMSPosPay.a */,
+				B8E3C9E923A3D07A002DEE2D /* PosPay_Resource.bundle */,
+				B8E3C9EA23A3D07A002DEE2D /* UMSSecKeyboardLibResource.bundle */,
+			);
+			path = UMSPosPay;
+			sourceTree = "<group>";
+		};
+		B8E3C9E123A3D07A002DEE2D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				B8E3C9E223A3D07A002DEE2D /* UMSPPPayUnifyPayPlugin.h */,
+				B8E3C9E323A3D07A002DEE2D /* UMSPPPayFastPay.h */,
+				B8E3C9E423A3D07A002DEE2D /* UMSPPPayOrder.h */,
+				B8E3C9E523A3D07A002DEE2D /* UMSPPPayVersionsInfo.h */,
+				B8E3C9E623A3D07A002DEE2D /* UMSPPPayPluginSettings.h */,
+				B8E3C9E723A3D07A002DEE2D /* UMSPPPayPosPay.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		B8E3C9EB23A3D07A002DEE2D /* UPPaymentControl */ = {
+			isa = PBXGroup;
+			children = (
+				B8E3C9EC23A3D07A002DEE2D /* UPPaymentControl.h */,
+				B8E3C9ED23A3D07A002DEE2D /* libPaymentControl.a */,
+			);
+			path = UPPaymentControl;
+			sourceTree = "<group>";
+		};
+		B8EB074A23A3D0FD003C7CF1 /* WeChat */ = {
+			isa = PBXGroup;
+			children = (
+				B8EB074B23A3D0FD003C7CF1 /* WXApi.h */,
+				B8EB074C23A3D0FD003C7CF1 /* WXApiObject.h */,
+				B8EB074D23A3D0FD003C7CF1 /* README.txt */,
+				B8EB074E23A3D0FD003C7CF1 /* WechatAuthSDK.h */,
+				B8EB074F23A3D0FD003C7CF1 /* libWeChatSDK.a */,
+			);
+			path = WeChat;
+			sourceTree = "<group>";
+		};
 		D8DBB5A3372BBE89884DBBF6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1775,6 +1812,7 @@
 				3C51A9671F0B63D6004ED84B /* 分享大@3x.png in Resources */,
 				3C60B6541F18927D004B4AFA /* hc_yuyin11@3x.png in Resources */,
 				3C8158AF208DB062008DA859 /* 已收藏-小@2x.png in Resources */,
+				B8EB075023A3D0FD003C7CF1 /* README.txt in Resources */,
 				3C30E87F1F34053200E35AC9 /* 收藏@2x.png in Resources */,
 				3C51A98A1F0B63D6004ED84B /* 星级@2x.png in Resources */,
 				3C51A96D1F0B63D6004ED84B /* 回到顶部@3x.png in Resources */,
@@ -1825,6 +1863,7 @@
 				3C3D78921EF3D17900DE6F46 /* User@2x.png in Resources */,
 				3C480C401FB989B000525309 /* 论@3x.png in Resources */,
 				3C69B3631EF8BF940068355D /* 标题@3x.png in Resources */,
+				B8E3C9F023A3D07A002DEE2D /* UMSSecKeyboardLibResource.bundle in Resources */,
 				3C51A99A1F0B63D7004ED84B /* 选中@2x.png in Resources */,
 				3CAB74141FED03150096035C /* aileyun.xcassets in Resources */,
 				3C51A9881F0B63D6004ED84B /* 收起@2x.png in Resources */,
@@ -1864,7 +1903,6 @@
 				3C30E8801F34053200E35AC9 /* 收藏@3x.png in Resources */,
 				3C9878E420A027A2000D33AB /* jiayinlogo.png in Resources */,
 				3C480C441FB9A22600525309 /* noticeNew.png in Resources */,
-				3CF697AD2092FCE900B31099 /* UMSSecKeyboardLibResource.bundle in Resources */,
 				3C51A9731F0B63D6004ED84B /* 已收藏-大@3x.png in Resources */,
 				3C51A96A1F0B63D6004ED84B /* 分类@2x.png in Resources */,
 				3C51A9651F0B63D6004ED84B /* 下拉@3x.png in Resources */,
@@ -1875,6 +1913,7 @@
 				3C51A99E1F0B63D7004ED84B /* 隐藏@2x.png in Resources */,
 				3C821EAE1F25C381005C976D /* AlipaySDK.bundle in Resources */,
 				3C30E8861F34053200E35AC9 /* 电话@3x.png in Resources */,
+				B8E3C9EF23A3D07A002DEE2D /* PosPay_Resource.bundle in Resources */,
 				3C3D78931EF3D17900DE6F46 /* User@3x.png in Resources */,
 				3C49828D1F0F85B0003ECA46 /* HC-jiaobiao-hui.png in Resources */,
 				3C3D78851EF3D17900DE6F46 /* Consult_HL@3x.png in Resources */,
@@ -1941,7 +1980,6 @@
 				3C3D78891EF3D17900DE6F46 /* Disc_HL@3x.png in Resources */,
 				3C51A98D1F0B63D6004ED84B /* 显示@3x.png in Resources */,
 				3C5E24F920E4B69D009FC4D4 /* selected@3x.png in Resources */,
-				3CF697AC2092FCE900B31099 /* PosPay_Resource.bundle in Resources */,
 				3C30E8751F34053200E35AC9 /* 删除@2x.png in Resources */,
 				3C6EE9A91FE8EA0500AD614E /* medicalRecord.jpg in Resources */,
 				3CF098E01F4D86E0008128B5 /* navi_HL@3x.png in Resources */,
@@ -2304,6 +2342,8 @@
 					"$(PROJECT_DIR)/aileyun/tools/libUMSUnifyPay",
 					"$(PROJECT_DIR)/aileyun/tools/libUMSUnifyPay/WeChat",
 					"$(PROJECT_DIR)/aileyun/tools/UMessage_Sdk_1.5.0a",
+					"$(PROJECT_DIR)/aileyun/tools/libUMSUnifyPay/UMSPosPay",
+					"$(PROJECT_DIR)/aileyun/tools/libUMSUnifyPay/UPPaymentControl",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -2380,6 +2420,8 @@
 					"$(PROJECT_DIR)/aileyun/tools/libUMSUnifyPay",
 					"$(PROJECT_DIR)/aileyun/tools/libUMSUnifyPay/WeChat",
 					"$(PROJECT_DIR)/aileyun/tools/UMessage_Sdk_1.5.0a",
+					"$(PROJECT_DIR)/aileyun/tools/libUMSUnifyPay/UMSPosPay",
+					"$(PROJECT_DIR)/aileyun/tools/libUMSUnifyPay/UPPaymentControl",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",

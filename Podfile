@@ -17,7 +17,7 @@ pod 'MJRefresh'
 
 pod ‘MJExtension’
 
-pod 'WechatOpenSDK'
+#pod 'WechatOpenSDK'
 
 pod 'HandyJSON', '~> 5.0.0-beta.1'
 
