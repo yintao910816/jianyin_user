@@ -91,10 +91,18 @@ class HomeFunctionView: UIView {
 //
 //                            return
 //                        }
+                    }else {
+                        let webVC = WebViewController()
+                        webVC.url = url
+                        naviVC?.pushViewController(webVC, animated: true)
                     }
 //                    let webVC = WebViewController()
 //                    webVC.url = url
 //                    naviVC?.pushViewController(webVC, animated: true)
+                }else {
+                    let webVC = WebViewController()
+                    webVC.url = url
+                    naviVC?.pushViewController(webVC, animated: true)
                 }
             }
         }else{
