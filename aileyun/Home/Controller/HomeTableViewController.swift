@@ -242,7 +242,7 @@ class HomeTableViewController: BaseViewController {
         
         gooodnewsV.snp.updateConstraints ({ (make) in
             make.left.right.equalTo(functionV)
-            make.top.equalTo(functionV.snp.bottom).offset(ViewGap)
+            make.top.equalTo(shouldHideNoticeV ? functionV.snp.bottom : noticeV.snp.bottom).offset(ViewGap)
             make.height.equalTo(GoodnewsHeight)
         })
         
